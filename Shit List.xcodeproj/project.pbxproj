@@ -12,6 +12,7 @@
 		CBD87CC022F7F19A0023493D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBD87CBE22F7F19A0023493D /* Main.storyboard */; };
 		CBD87CC222F7F19A0023493D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBD87CC122F7F19A0023493D /* Assets.xcassets */; };
 		CBD87CC522F7F19A0023493D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBD87CC322F7F19A0023493D /* LaunchScreen.storyboard */; };
+		CBD87CD122F815810023493D /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD87CD022F815810023493D /* Items.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		CBD87CC122F7F19A0023493D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CBD87CC422F7F19A0023493D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CBD87CC622F7F19A0023493D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBD87CD022F815810023493D /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,46 +56,47 @@
 		CBD87CB922F7F19A0023493D /* Shit List */ = {
 			isa = PBXGroup;
 			children = (
-				CBD87CCC22F806880023493D /* Model */,
-				CBD87CCE22F806990023493D /* View */,
-				CBD87CCD22F806960023493D /* Controller */,
-				CBD87CCF22F806BC0023493D /* Supporting Siles */,
+				CBD87CCC22F806880023493D /* Data Model */,
+				CBD87CCE22F806990023493D /* Views */,
+				CBD87CCD22F806960023493D /* Controllers */,
+				CBD87CCF22F806BC0023493D /* Supporting Files */,
 				CBD87CC622F7F19A0023493D /* Info.plist */,
-				CBD87CC122F7F19A0023493D /* Assets.xcassets */,
 			);
 			path = "Shit List";
 			sourceTree = "<group>";
 		};
-		CBD87CCC22F806880023493D /* Model */ = {
+		CBD87CCC22F806880023493D /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
+				CBD87CD022F815810023493D /* Items.swift */,
 			);
-			path = Model;
+			path = "Data Model";
 			sourceTree = "<group>";
 		};
-		CBD87CCD22F806960023493D /* Controller */ = {
+		CBD87CCD22F806960023493D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				CBD87CBA22F7F19A0023493D /* AppDelegate.swift */,
 				CBD87CBC22F7F19A0023493D /* ShitListViewController.swift */,
 			);
-			path = Controller;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
-		CBD87CCE22F806990023493D /* View */ = {
+		CBD87CCE22F806990023493D /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				CBD87CBE22F7F19A0023493D /* Main.storyboard */,
 				CBD87CC322F7F19A0023493D /* LaunchScreen.storyboard */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		CBD87CCF22F806BC0023493D /* Supporting Siles */ = {
+		CBD87CCF22F806BC0023493D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CBD87CC122F7F19A0023493D /* Assets.xcassets */,
 			);
-			path = "Supporting Siles";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBD87CBD22F7F19A0023493D /* ShitListViewController.swift in Sources */,
+				CBD87CD122F815810023493D /* Items.swift in Sources */,
 				CBD87CBB22F7F19A0023493D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
