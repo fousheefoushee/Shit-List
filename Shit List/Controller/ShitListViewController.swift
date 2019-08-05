@@ -11,11 +11,14 @@ import UIKit
 class ShitListViewController: UITableViewController {
 
     var itemArray = ["Kick Thom's ass!", "Fuck Jim up!", "Bitch, better have my money!"]
-    
+    let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if let items = defaults.array(forKey: "ShitListArray") as? [String] {
+            itemArray = items
+        }
         
     }
     
@@ -56,9 +59,12 @@ class ShitListViewController: UITableViewController {
         let alert = UIAlertController(title: "Add a New MF'r!", message: "", preferredStyle: .alert)
         
         let action = UIAlertAction(title: "Add Item", style: .default) { (action) in
-            print("Successs!")
-            print(textField.text!)
+//            print("Successs!")
+//            print(textField.text!)
+            
             self.itemArray.append(textField.text!)
+            self.defaults.set(self.itemArray, forKey: "ShitListArray")
+            
             self.tableView.reloadData()
         }
         
