@@ -10,7 +10,7 @@ import UIKit
 
 class ShitListViewController: UITableViewController {
 
-    let itemArray = ["Kick Thom ass!", "Fuck Jim up!", "Bitch, better have my money!"]
+    var itemArray = ["Kick Thom's ass!", "Fuck Jim up!", "Bitch, better have my money!"]
     
     
     override func viewDidLoad() {
@@ -45,6 +45,33 @@ class ShitListViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         
     }
+    
+    
+    //MARK: Add new item
+    
+    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+        
+        var textField = UITextField()
+        
+        let alert = UIAlertController(title: "Add a New MF'r!", message: "", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "Add Item", style: .default) { (action) in
+            print("Successs!")
+            print(textField.text!)
+            self.itemArray.append(textField.text!)
+            self.tableView.reloadData()
+        }
+        
+        alert.addTextField { (alertTextField) in
+            alertTextField.placeholder = "Create Item"
+            textField = alertTextField
+        }
+        
+        alert.addAction(action)
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
     
 
 }
